@@ -16,7 +16,7 @@
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, 4px);
   @include transition($btn-transition);
 
   @include hover() {
@@ -49,6 +49,11 @@
       }
     }
   }
+
+  &.btn-shadow {
+    filter: drop-shadow(0px 4px 15px rgba(50, 82, 223, 0.76));
+  }
+
 }
 
 // Future-proof disabling of clicks on `<a>` elements
