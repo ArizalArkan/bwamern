@@ -12,7 +12,7 @@ export default function Hero(props) {
 
     const _showMeNow = () => {
         window.scroll({
-            top: props.refMontPicked.current.offsetTop - 30,
+            top: props.refMostPicked.current.offsetTop - 30,
             behavior: 'smooth'
         })
     }

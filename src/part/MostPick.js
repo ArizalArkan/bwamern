@@ -3,12 +3,12 @@ import Button from 'elements/Button'
 
 export default function MostPick(props) {
     return (
-        <section className="container">
+        <section className="container" ref={props.refMostPicked}>
             <h4 className="mb-3">Most Picked</h4>
             <div className="container-grid">
                 {props.data.map((data, index) => {
                     return (
-                        <div className={`item column-4 ${index === 0 ? "row-2" : "row-1"}`}>
+                        <div className={`item column-4 ${index === 0 ? "row-2" : "row-1"}`} key={index}>
                             <div className="card card-feature">
                                 <div className="tag">
                                     ${data.price}
